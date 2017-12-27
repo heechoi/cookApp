@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>내 요리레시피</title>
+<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/> 
+<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.icons-1.4.5.min.css"/> 
+<link rel="stylesheet" href="css/myrecipe_addpage.css"/>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="cordova_plugins.js"></script>
+<script src="js/myrecipe_addpage.js"></script>
+<script>
+	$(function(){
+		//요리 상세과정 삭제
+		removebtn();
+		//요리과정 사진
+		document.addEventListener("deviceready",onDeviceReady,false);
+		//add page 디테일한 요리내용 추가버튼 눌렀을때
+		detailContent();
+		
+		takePicture();//카메라
+		getAlbumImage();//앨범
+		
+		//데이터베이스
+		openDB();
+	createDB();
+		//dropTable();
+		
+		//등록버튼 눌렀을때
+	 	$("#entroll").click(function() {
+			insertDB();
+		}) 
+		
+	})
+</script>
+</head>
+<body>
+	
+	<div data-role="page" id="addPage">
+		<div data-role="header">
+		<a href="main.html" rel="external" data-icon="home" data-iconpos="notext"></a>
+			<h1>레시피 기록하기</h1>
+		</div>
+		<div data-role="content">
+			<div id="title">
+				<div id="titleImg">
+					<a href="#popupmenu" data-icon="plus" data-iconpos="notext" data-role="button" id="titleImgAdd" data-rel="popup"></a>
+				</div>
+				<div id="titlecontent">
+					<table>
+						<tr>
+							<td class="titletitle">요리명</td>
+							<td colspan="2"><input type="text" id="cookname"></td>
+						</tr>
+						<tr>
+							<td class="titletitle">난이도</td>
+							<td>
+								<select id="level" data-inline="true">
+									<option value="0">선택</option>
+									<option value="1">매우쉬움</option>
+									<option value="2">쉬움</option>
+									<option value="3">보통</option>
+									<option value="4">어려움</option>
+									<option value="5">매우어려움</option>
+								</select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="titletitle">소요시간</td>
+							<td id="cooktime"><input type="text" id="timevalue"></td>
+							<td>분</td>
+						</tr>
+					</table>
+				</div>
+				<div id="detailcontent">
+						<label for="ingredient">재료</label>
+						<textarea rows="5" cols="10" id="ingredient"></textarea>
+				</div>
+				<div> 
+					<span id="title2">상세 과정</span>
+					<button id="detailAdd" data-icon="plus" data-iconpos="notext"></button>
+				</div>
+					<div id="detaillist"></div>
+			</div>
+			<div data-role="popup" id="popupmenu" style="width:300px;">
+				<a href="#" data-rel="back" data-role="button"  data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+				<div data-role="content">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<button id="camera">카메라</button>
+						</div>
+						<div class="ui-block-b">
+							<button id="album">앨범</button>
+						</div>
+						
+					</div>
+				</div>
+		</div>
+			<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" id="entroll">등록</a></li>
+					<li><a href="myrecipe.html" rel="external">취소</a></li>
+				</ul>
+			</div>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>

@@ -1,0 +1,87 @@
+@CHARSET "UTF-8";
+
+
+/*레시피 기록하는 화면 css  */
+#titleImg{
+	width:98%;
+	margin:0 auto;
+	height:250px;
+	border:2px dotted black;
+}
+#titleImgAdd{
+	margin: 0 auto;
+	margin-top:30%;
+}
+#titleImg > img{
+	width:100%;
+}
+#titlecontent{
+	padding-top:10px;
+}
+#titlecontent table{
+	width:100%;
+}
+/* 메인 title  */
+.titletitle{
+	width:23%;
+}
+.titleImg img{
+	width:100%;
+	height:200px !important;
+}
+#cooktime{
+	width:47%;
+}
+#titleImg img{
+	width:100%;
+	height:100%;
+}
+/*재료 css  */
+#detailcontent{
+	padding:10px 0px;
+}
+ #detaillist{
+	margin-top: 4px;
+} 
+#ingredient{
+	max-height:100px !important;
+	overflow-y:scroll !important;
+}
+/*요리 과정 설명 css  */
+#title2{
+	float:left;
+	padding:3px 5px 2px 0px;
+}
+#detailAdd{
+	margin: 0;
+}
+.addlist{
+	width:100%;
+	height:250px;
+	padding-top:10px;
+	border-bottom:1px dashed black;
+	position: relative;
+}
+.detailImg{
+	width:80%;
+	height:70%;
+	border:2px dotted black;
+}
+.removebtn{
+	position:absolute;
+	top:0;
+	right:15px;
+}
+.timerbtn{
+	position:absolute;
+	top:50%;
+	right:10px;
+}
+.timerbtn a{
+	color: black;
+	text-decoration: none;
+}
+.addlist>textarea{
+	max-height:56px !important;
+	overflow-y:scroll !important;
+}

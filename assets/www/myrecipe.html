@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>내 요리레시피</title>
+<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/> 
+<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile.icons-1.4.5.min.css"/> 
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="myrecipemain">
+		<div data-role="header">
+		<a href="#panel1" data-type="button" data-icon="bullets" data-iconpos="notext"></a>
+			<h1>나만의 레시피</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" id="mylist">
+			</ul>
+			
+			<div data-role="panel" id="panel1" data-display="overlay">
+				<ul data-role="listview">
+					<li><a href="#">추천 레시피</a></li>
+					<li><a href="#">레시피 따라하기</a></li>
+					<li><a href="#">즐겨찾기 레시피</a></li>
+					<li><a href="#">식재료 구매매장 찾기</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="myrecipe_add.html" data-icon="plus"  rel="external">레시피 추가</a></li>
+					<li><a href="#" data-icon="minus">레시피 삭제</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

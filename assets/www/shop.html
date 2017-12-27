@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">   
+<title>간단한 지도 표시하기</title>
+<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css"/> 
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=VFfTJbLyFjDr6pPw2yEb"></script>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script src="cordova_plugins.js"></script>
+
+<script src="js/shopMap.js"></script>
+ <script type="text/javascript">
+
+    $(function(){
+    	document.addEventListener("deviceready", function() {
+    		//GPS가 사용가능한지
+    	    checkAvailability();
+    	}, false);     
+    });    
+</script>
+</head>
+<body>
+<div id="map" style="width:100%;height:400px;"></div>
+<div id="test"></div>
+</body>
+</html>
